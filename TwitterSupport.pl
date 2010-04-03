@@ -110,9 +110,9 @@ HTMLHEREDOC
 <mt:if name="twitter_url">
         <mtapp:setting
             id="twitter_url"
-            label="<__trans phrase="Twit">"
+            label="<__trans phrase="Twitter">"
             label_class="top-label">
-<a href="<$mt:var name="twitter_url"$>" target="_blank"><__trans phrase="Post a twit to twitter."></a>
+<a href="<$mt:var name="twitter_url"$>" target="_blank"><__trans phrase="Post a tweet."></a>
         </mtapp:setting>
 </mt:if>
 HTMLHEREDOC
@@ -131,8 +131,8 @@ HTMLHEREDOC
 <mt:if name="twitter_url">
         <mtapp:setting
             id="twitter_url"
-            label="<__trans phrase="Twit">">
-<a href="<$mt:var name="twitter_url"$>" target="_blank"><__trans phrase="Post a twit to twitter."></a>
+            label="<__trans phrase="Twitter">">
+<a href="<$mt:var name="twitter_url"$>" target="_blank"><__trans phrase="Post a tweet."></a>
         </mtapp:setting>
 </mt:if>
 HTMLHEREDOC
