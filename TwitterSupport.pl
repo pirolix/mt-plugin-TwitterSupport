@@ -11,7 +11,7 @@ use constant DEFAULT_FORMAT => q(<$mt:entrytitle$> <$mt:entrypermalink tinyurl="
 
 use vars qw( $MYNAME $VERSION );
 $MYNAME = 'TwitterSupport';
-$VERSION = '0.01 DEVEL';
+$VERSION = '0.02';
 
 use base qw( MT::Plugin );
 my $plugin = __PACKAGE__->new({
@@ -141,7 +141,7 @@ HTMLHEREDOC
 
 ### template_param.edit_entry
 sub _edit_entry_param {
-    my ($cb, $app, $param, $tmpl) = @_;
+    my ($cb, $app, $param) = @_;
 
     my $blog_id = $param->{blog_id}
         or return;
