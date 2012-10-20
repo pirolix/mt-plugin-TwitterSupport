@@ -1,4 +1,5 @@
 package MT::Plugin::OMV::TwitterSupport;
+# $Id$
 
 use strict;
 use MT 4;
@@ -9,9 +10,10 @@ use MT::Util;
 
 use constant DEFAULT_FORMAT => q(<$mt:entrytitle$> <$mt:entrypermalink tinyurl="1"$>);
 
-use vars qw( $MYNAME $VERSION );
-$MYNAME = 'TwitterSupport';
-$VERSION = '0.02';
+use vars qw( $VENDOR $MYNAME $VERSION );
+($VENDOR, $MYNAME) = (split /::/, __PACKAGE__)[-2, -1];
+(my $revision = '$Rev$') =~ s/\D//g;
+$VERSION = '0.02'. ($revision ? ".$revision" : '');
 
 use base qw( MT::Plugin );
 my $plugin = __PACKAGE__->new({
@@ -112,7 +114,7 @@ HTMLHEREDOC
             id="twitter_url"
             label="<__trans phrase="Twitter">"
             label_class="top-label">
-<a href="<$mt:var name="twitter_url"$>" target="_blank"><__trans phrase="Post a tweet."></a>
+<a href="<$mt:var name="twitter_url"$>" target="twitter"><__trans phrase="Post a tweet."></a>
         </mtapp:setting>
 </mt:if>
 HTMLHEREDOC
@@ -132,7 +134,7 @@ HTMLHEREDOC
         <mtapp:setting
             id="twitter_url"
             label="<__trans phrase="Twitter">">
-<a href="<$mt:var name="twitter_url"$>" target="_blank"><__trans phrase="Post a tweet."></a>
+<a href="<$mt:var name="twitter_url"$>" target="twitter"><__trans phrase="Post a tweet."></a>
         </mtapp:setting>
 </mt:if>
 HTMLHEREDOC
